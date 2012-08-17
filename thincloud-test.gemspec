@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["rbousquet@newleaders.com", "pcohen@newleaders.com"]
   gem.description   = "Test harness generator for new Thincloud apps."
   gem.summary       = "Test harness generator for new Thincloud apps."
-  gem.homepage      = "https://github.com/newleaders/thincloud-test"
+  gem.homepage      = "http://newleaders.github.com/thincloud-test"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
