@@ -1,12 +1,12 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/thincloud-test/version', __FILE__)
+require File.expand_path("../lib/thincloud-test/version", __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Robert Bousquet"]
-  gem.email         = ["rbousquet@newleaders.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.authors       = ["Robert Bousquet", "Phil Cohen"]
+  gem.email         = ["rbousquet@newleaders.com", "pcohen@newleaders.com"]
+  gem.description   = "Test harness generator for new Thincloud apps."
+  gem.summary       = "Test harness generator for new Thincloud apps."
+  gem.homepage      = "https://github.com/newleaders/thincloud-test"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
