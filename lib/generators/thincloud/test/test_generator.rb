@@ -33,6 +33,8 @@ module Thincloud
 
         copy_file "spec.rake", "lib/tasks/spec.rake"
 
+        copy_file "Guardfile"
+
         append_file ".gitignore", "coverage"
 
         say_status "", ""
