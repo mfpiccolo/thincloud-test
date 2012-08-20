@@ -26,8 +26,9 @@ module Thincloud
         empty_directory "spec/controllers"
         empty_directory "spec/mailers"
         empty_directory "spec/helpers"
+        empty_directory "spec/support"
 
-        run "touch spec/{models,controllers,mailers,helpers}/.gitkeep"
+        run "touch spec/{models,controllers,mailers,helpers,support}/.gitkeep"
 
         copy_file "spec_helper.rb", "spec/spec_helper.rb"
 
