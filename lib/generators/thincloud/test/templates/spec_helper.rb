@@ -13,7 +13,7 @@ require "minitest/rails"
 # Uncomment if you want Capybara in accceptance/integration tests
 # require "minitest/rails/capybara"
 
-# Uncomment if you want awesome colorful output
+# Provides awesome colorful output
 require "minitest/pride"
 
 # Requires supporting ruby files with custom matchers and macros, etc,
