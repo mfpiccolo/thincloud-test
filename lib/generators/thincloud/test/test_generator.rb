@@ -8,6 +8,7 @@ module Thincloud
       desc "Generates the test harness."
       def test
         gem_group :test do
+          gem "factory_girl_rails"
           gem "guard"
           gem "growl"
           gem "minitest"
