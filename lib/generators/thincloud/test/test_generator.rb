@@ -6,12 +6,12 @@ module Thincloud
       source_root File.expand_path("../templates", __FILE__)
 
       desc "Generates the test harness."
-
       def test
         gem_group :test do
           gem "guard"
           gem "growl"
           gem "minitest"
+          gem "mocha"
           gem "guard-minitest"
           gem "minitest-rails"
           gem "minitest-rails-shoulda", "~> 0.1.0"
