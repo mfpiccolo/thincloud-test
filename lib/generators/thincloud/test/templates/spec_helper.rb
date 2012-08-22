@@ -9,12 +9,12 @@ require File.expand_path('../../config/environment', __FILE__)
 
 require "minitest/autorun"
 require "minitest/rails"
+require "minitest/pride" # Provides awesome colorful output
 
 # Uncomment if you want Capybara in accceptance/integration tests
 # require "minitest/rails/capybara"
 
-# Provides awesome colorful output
-require "minitest/pride"
+require "mocha"
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
