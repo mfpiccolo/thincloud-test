@@ -1,5 +1,5 @@
 require "simplecov"
-SimpleCov.add_filter "spec"
+SimpleCov.add_filter "test"
 SimpleCov.add_filter "config"
 SimpleCov.command_name "MiniTest"
 SimpleCov.start
@@ -18,7 +18,7 @@ require "mocha"
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
-Dir[File.join("./spec/support/**/*.rb")].sort.each { |f| require f }
+Dir[File.join("./test/support/**/*.rb")].sort.each { |f| require f }
 
 class MiniTest::Rails::ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.

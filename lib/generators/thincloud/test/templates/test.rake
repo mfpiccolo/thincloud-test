@@ -2,9 +2,9 @@ require "rake/testtask"
 
 task default: :spec
 
-Rake::TestTask.new(:spec) do |t|
+Rake::TestTask.new(:test) do |t|
   t.libs << "lib"
-  t.libs << "spec"
-  t.pattern = "spec/**/*_spec.rb"
+  t.libs << "test"
+  t.pattern = "test/**/*_test.rb"
   t.verbose = false
 end
