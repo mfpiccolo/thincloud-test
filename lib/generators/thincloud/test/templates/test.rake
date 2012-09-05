@@ -1,6 +1,6 @@
 require "rake/testtask"
 
-task default: :spec
+task default: :test
 
 Rake::TestTask.new(:test) do |t|
   t.libs << "lib"
