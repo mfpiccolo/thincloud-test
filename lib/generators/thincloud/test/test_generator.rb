@@ -23,17 +23,17 @@ module Thincloud
           "config.generators { |g| g.test_framework :mini_test, spec: true, fixture: false }"
         end
 
-        empty_directory "spec/models"
-        empty_directory "spec/controllers"
-        empty_directory "spec/mailers"
-        empty_directory "spec/helpers"
-        empty_directory "spec/support"
+        empty_directory "test/models"
+        empty_directory "test/controllers"
+        empty_directory "test/mailers"
+        empty_directory "test/helpers"
+        empty_directory "test/support"
 
-        run "touch spec/{models,controllers,mailers,helpers,support}/.gitkeep"
+        run "touch test/{models,controllers,mailers,helpers,support}/.gitkeep"
 
-        copy_file "spec_helper.rb", "spec/spec_helper.rb"
+        copy_file "minitest_helper.rb", "test/minitest_helper.rb"
 
-        copy_file "spec.rake", "lib/tasks/spec.rake"
+        copy_file "test.rake", "lib/tasks/test.rake"
 
         copy_file "Guardfile"
 
