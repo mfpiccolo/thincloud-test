@@ -12,11 +12,12 @@ module Thincloud
           gem "guard"
           gem "growl"
           gem "minitest"
-          gem "mocha"
           gem "guard-minitest"
           gem "minitest-rails"
           gem "minitest-rails-shoulda", "~> 0.1.0"
+          gem "rb-fsevent",             "~> 0.9.1"
           gem "simplecov"
+          gem "mocha" # Must be after minitest
         end
 
         application do
