@@ -1,19 +1,30 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path("../lib/thincloud-test/version", __FILE__)
+require File.expand_path("../lib/thincloud/test/version", __FILE__)
 
-Gem::Specification.new do |gem|
-  gem.authors       = ["Robert Bousquet", "Phil Cohen"]
-  gem.email         = ["rbousquet@newleaders.com", "pcohen@newleaders.com"]
-  gem.description   = "Test harness generator for new Thincloud apps."
-  gem.summary       = "Test harness generator for new Thincloud apps."
-  gem.homepage      = "http://newleaders.github.com/thincloud-test"
+Gem::Specification.new do |s|
+  s.authors       = ["Robert Bousquet", "Phil Cohen", "Don Morrison"]
+  s.email         = ["rbousquet@newleaders.com", "pcohen@newleaders.com",
+                     "dmorrison@newleaders.com"]
+  s.description   = "Test harness generator for new Thincloud apps."
+  s.summary       = "Test harness generator for new Thincloud apps."
+  s.homepage      = "http://newleaders.github.com/thincloud-test"
 
-  gem.files         = `git ls-files`.split($\)
-  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
-  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.name          = "thincloud-test"
-  gem.require_paths = ["lib"]
-  gem.version       = Thincloud::Test::VERSION
+  s.files         = `git ls-files`.split($\)
+  s.executables   = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  s.test_files    = s.files.grep(%r{^(test|spec|features)/})
+  s.name          = "thincloud-test"
+  s.require_paths = ["lib"]
+  s.version       = Thincloud::Test::VERSION
 
-  gem.add_dependency "rails", "~> 3.2.8"
+  s.add_dependency "rails", "~> 3.2.8"
+  s.add_dependency "cane", "~> 2.3.0"
+  s.add_dependency "guard", "~> 1.3.3"
+  s.add_dependency "factory_girl_rails", "~> 4.0.0"
+  s.add_dependency "minitest", "~> 3.4.0"
+  s.add_dependency "guard-minitest", "~> 0.5.0"
+  s.add_dependency "minitest-rails", "~> 0.1.3"
+  s.add_dependency "minitest-rails-shoulda", "~> 0.1.0"
+  s.add_dependency "rb-fsevent", "~> 0.9.1"
+  s.add_dependency "simplecov", "~> 0.6.4"
+  s.add_dependency "mocha", "~> 0.12.4" # Must be after minitest
 end
