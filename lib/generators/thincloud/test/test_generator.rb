@@ -9,6 +9,9 @@ module Thincloud
       def test
         generate "mini_test:install"
 
+        empty_directory "test/factories"
+        create_file "test/factories/.gitkeep"
+
         remove_file "test/minitest_helper.rb"
         copy_file "minitest_helper.rb", "test/minitest_helper.rb"
 
