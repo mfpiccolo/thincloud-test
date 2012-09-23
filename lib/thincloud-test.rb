@@ -1,4 +1,4 @@
-require "thincloud-test/version"
+require "thincloud/test/version"
 
 module Thincloud
   module Test

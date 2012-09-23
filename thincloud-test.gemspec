@@ -14,4 +14,6 @@ Gem::Specification.new do |gem|
   gem.name          = "thincloud-test"
   gem.require_paths = ["lib"]
   gem.version       = Thincloud::Test::VERSION
+
+  gem.add_dependency "rails", "~> 3.2.8"
 end
