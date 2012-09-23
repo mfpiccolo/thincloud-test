@@ -2,13 +2,13 @@
 
 ## Description
 
-Test harness generator for new Thincloud apps.
+Rails testing engine and configuration generator for Thincloud apps.
 
 ## Requirements
 
-This gem requires Rails 3.2+ and has been tested on the following versions:
+This gem requires Rails 3.2.8+ and has been tested on the following versions:
 
-* 3.2
+* 3.2.8
 
 This gem has been tested against the following Ruby versions:
 
@@ -37,7 +37,7 @@ $ gem install thincloud-test
 
 ## Usage
 
-This gem adds a generator to Rails, `thincloud:test`. Running the generator will install test-related gems, adds a minitest-based spec directory and application configuration:
+This engine manages testing dependencies and adds a generator to Rails, `thincloud:test`. Running the generator will run the `minitest-rails` generator and add application configuration files:
 
 * Invoke the generator:
 
