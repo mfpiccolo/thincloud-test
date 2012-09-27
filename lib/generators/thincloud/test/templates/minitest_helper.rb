@@ -4,7 +4,7 @@ if RUBY_ENGINE == "ruby"
     SimpleCov.add_filter "test"
     SimpleCov.add_filter "config"
     SimpleCov.command_name "MiniTest"
-    SimpleCov.start
+    SimpleCov.start "rails"
   rescue LoadError
     warn "unable to load SimpleCov"
   end
