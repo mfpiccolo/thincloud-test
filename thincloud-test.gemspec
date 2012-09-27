@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 3.2.8"
   s.add_dependency "cane", "~> 2.3.0"
+  s.add_dependency "database_cleaner", "~> 0.8.0"
   s.add_dependency "guard", "~> 1.4.0"
   s.add_dependency "factory_girl_rails", "~> 4.1.0"
   s.add_dependency "minitest", "~> 3.5.0"
