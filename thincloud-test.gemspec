@@ -18,13 +18,13 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 3.2.8"
   s.add_dependency "cane", "~> 2.3.0"
-  s.add_dependency "guard", "~> 1.3.3"
-  s.add_dependency "factory_girl_rails", "~> 4.0.0"
-  s.add_dependency "minitest", "~> 3.4.0"
+  s.add_dependency "guard", "~> 1.4.0"
+  s.add_dependency "factory_girl_rails", "~> 4.1.0"
+  s.add_dependency "minitest", "~> 3.5.0"
   s.add_dependency "guard-minitest", "~> 0.5.0"
-  s.add_dependency "minitest-rails", "~> 0.1.3"
-  s.add_dependency "minitest-rails-shoulda", "~> 0.1.0"
+  s.add_dependency "minitest-rails", "~> 0.2.0"
+  s.add_dependency "minitest-rails-shoulda", "~> 0.2.0"
   s.add_dependency "rb-fsevent", "~> 0.9.1"
   s.add_dependency "simplecov", "~> 0.6.4"
-  s.add_dependency "mocha", "~> 0.12.4" # Must be after minitest
+  s.add_dependency "mocha", "~> 0.12.5" # Must be after minitest
 end

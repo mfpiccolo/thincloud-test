@@ -4,7 +4,7 @@ if RUBY_ENGINE == "ruby"
     SimpleCov.add_filter "test"
     SimpleCov.add_filter "config"
     SimpleCov.command_name "MiniTest"
-    SimpleCov.start
+    SimpleCov.start "rails"
   rescue LoadError
     warn "unable to load SimpleCov"
   end
@@ -15,22 +15,16 @@ require File.expand_path('../../config/environment', __FILE__)
 
 require "minitest/autorun"
 require "minitest/rails"
-require "minitest/pride" # Provides awesome colorful output
+require "minitest/pride"          # Provides awesome colorful output
+require "minitest-rails-shoulda"  # shoulda matchers
 
 # Uncomment if you want Capybara in accceptance/integration tests
 # require "minitest/rails/capybara"
 
-require "mocha"
+require "mocha"  # mocks and stubs
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
 Dir[File.join("./test/support/**/*.rb")].sort.each { |f| require f }
-
-class MiniTest::Rails::ActiveSupport::TestCase
-  # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.
-  # fixtures :all
-
-  # Add more helper methods to be used by all tests here...
-end
 
 MiniTest::Rails.override_testunit!
