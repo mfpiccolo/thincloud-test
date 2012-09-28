@@ -15,6 +15,7 @@ module Thincloud
         remove_file "test/minitest_helper.rb"
         copy_file "minitest_helper.rb", "test/minitest_helper.rb"
 
+        copy_file "factory_girl.rb", "test/support/factory_girl.rb"
         copy_file "database_cleaner.rb", "test/support/database_cleaner.rb"
         copy_file "test.rake", "lib/tasks/test.rake"
 
