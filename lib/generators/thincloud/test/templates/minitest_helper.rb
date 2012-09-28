@@ -26,7 +26,7 @@ require "minitest-rails-shoulda"  # shoulda matchers
 require "mocha"  # mocks and stubs
 
 # use factories instead of fixtures
-require 'factory_girl'
+require "factory_girl"
 FactoryGirl.find_definitions
 
 # Requires supporting ruby files with custom matchers and macros, etc,
