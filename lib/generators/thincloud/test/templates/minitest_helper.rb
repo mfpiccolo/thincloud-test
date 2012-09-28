@@ -13,6 +13,8 @@ end
 ENV["RAILS_ENV"] = "test"
 require File.expand_path('../../config/environment', __FILE__)
 
+require "database_cleaner"  # reset database on each test run
+
 require "minitest/autorun"
 require "minitest/rails"
 require "minitest/pride"          # Provides awesome colorful output
