@@ -1,2 +1,2 @@
 require "thincloud/test/version"
-require "thincloud/test/engine"
+require "thincloud/test/railtie"
