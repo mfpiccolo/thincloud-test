@@ -1,6 +1,6 @@
 module Thincloud
   module Test
-    class Engine < ::Rails::Engine
+    class Railtie < ::Rails::Railtie
 
       initializer "thincloud.test.generators" do |app|
         app.config.generators do |g|
