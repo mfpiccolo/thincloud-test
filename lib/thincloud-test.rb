@@ -5,7 +5,7 @@ require "minitest/pride"          # Provides awesome colorful output
 require "minitest-rails-shoulda"
 
 require "thincloud/test"
-require "mocha"
+require "mocha/setup"
 require "factory_girl"
 
 module Thincloud
