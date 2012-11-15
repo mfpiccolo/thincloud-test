@@ -20,7 +20,7 @@ require "minitest/pride" # Provides awesome colorful output
 # Uncomment if you want Capybara in accceptance/integration tests
 # require "minitest/rails/capybara"
 
-require "mocha"
+require "mocha/setup"
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.

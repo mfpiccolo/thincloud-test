@@ -17,16 +17,19 @@ Gem::Specification.new do |s|
   s.version       = Thincloud::Test::VERSION
 
   s.add_dependency "rails",                   "~> 3.2.8"
-  s.add_dependency "cane",                    "~> 2.3.0"
-  s.add_dependency "database_cleaner",        "~> 0.8.0"
-  s.add_dependency "guard",                   "~> 1.4.0"
+  s.add_dependency "cane",                    "~> 2.4.0"
+  s.add_dependency "capybara",                "~> 2.0.0"
+  s.add_dependency "database_cleaner",        "~> 0.9.1"
+  s.add_dependency "guard",                   "~> 1.5.4"
   s.add_dependency "factory_girl_rails",      "~> 4.1.0"
-  s.add_dependency "minitest",                "~> 3.5.0"
+  s.add_dependency "minitest",                "~> 4.2.0"
+  s.add_dependency "minitest-rails",          "~> 0.3.0"
   s.add_dependency "guard-minitest",          "~> 0.5.0"
   s.add_dependency "minitest-rails-shoulda",  "~> 0.3.0"
   s.add_dependency "rb-fsevent",              "~> 0.9.1"
   s.add_dependency "simplecov",               "~> 0.7.1"
-  s.add_dependency "mocha",                   "~> 0.12.7" # Must be after minitest
+  s.add_dependency "terminal-notifier-guard", "~> 1.5.3"
+  s.add_dependency "mocha",                   "~> 0.13.0" # Must be after minitest
   s.add_dependency "minitest-rails-capybara", "~> 0.1"
 
 end
