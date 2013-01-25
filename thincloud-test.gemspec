@@ -32,5 +32,6 @@ Gem::Specification.new do |s|
   s.add_dependency "mocha",                   "~> 0.13.2" # Must be after minitest
   s.add_dependency "minitest-rails-capybara", "~> 0.5.1"
   s.add_dependency "shoulda-matchers",        "1.4.1" # 1.4.2 requires mocha 0.10
+  s.add_dependency "minitest-reporters",      "~> 0.14.6"
 
 end
