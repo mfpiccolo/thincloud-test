@@ -41,11 +41,17 @@ module Thincloud
         copy_file "test.rake", "lib/tasks/test.rake"
         copy_file "Guardfile"
 
+        empty_directory "test/ci"
+        copy_file "ci/before_script.sh", "test/ci/before_script.sh"
+        copy_file "ci/ci_runner.sh", "test/ci/ci_runner.sh"
+        copy_file "ci/travis.yml", ".travis.yml"
+
         create_file ".gitignore" unless File.exist?(".gitignore")
         append_file ".gitignore", "coverage"
 
         say_status "", ""
         say_status "success", "thincloud-test has finished."
+        say_status "", "Customize .travis.yml and test/ci/* for your project."
       end
 
     end
