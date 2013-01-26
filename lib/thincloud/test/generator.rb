@@ -6,7 +6,7 @@ module Thincloud
   module Test
     class Generator
       def self.generate
-        ::Thincloud::Generators::TestGenerator.new.test
+        ::Thincloud::Generators::TestGenerator.new.standalone
       end
     end
   end

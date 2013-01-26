@@ -32,6 +32,22 @@ module Thincloud
         say_status "success", "thincloud-test has finished."
       end
 
+      # Generates thincloud test infrastructure outside of Rails
+      def standalone
+        remove_file "test/test_helper.rb"
+
+        copy_file "minitest_helper_standalone.rb", "test/minitest_helper.rb"
+        copy_file "minitest_reporters.rb", "test/support/minitest_reporters.rb"
+        copy_file "test.rake", "lib/tasks/test.rake"
+        copy_file "Guardfile"
+
+        create_file ".gitignore" unless File.exist?(".gitignore")
+        append_file ".gitignore", "coverage"
+
+        say_status "", ""
+        say_status "success", "thincloud-test has finished."
+      end
+
     end
   end
 end
