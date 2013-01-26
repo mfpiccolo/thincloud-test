@@ -15,12 +15,12 @@ module Thincloud
         remove_file "test/minitest_helper.rb"
         copy_file "minitest_helper_rails.rb", "test/minitest_helper.rb"
 
-        copy_file "capybara.rb",         "test/support/capybara.rb"
-        copy_file "factory_girl.rb",     "test/support/factory_girl.rb"
+        copy_file "capybara.rb", "test/support/capybara.rb"
+        copy_file "factory_girl.rb", "test/support/factory_girl.rb"
         copy_file "database_cleaner.rb", "test/support/database_cleaner.rb"
-        copy_file "routing_spec.rb",     "test/support/routing_spec.rb"
         copy_file "minitest_rails.rb", "test/support/minitest_rails.rb"
         copy_file "minitest_reporters.rb", "test/support/minitest_reporters.rb"
+        copy_file "routing_spec.rb", "test/support/routing_spec.rb"
         copy_file "test.rake", "lib/tasks/test.rake"
 
         copy_file "Guardfile"
