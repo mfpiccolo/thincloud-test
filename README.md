@@ -2,13 +2,13 @@
 
 ## Description
 
-Rails testing engine and configuration generator for Thincloud apps.
+Testing framework configuration generator for Thincloud apps with support for Rails applications and Rails Engines/Railties.
 
 ## Requirements
 
-This gem requires Rails 3.2.8+ and has been tested on the following versions:
+This gem requires Rails 3.2.11+ and has been tested on the following versions:
 
-* 3.2.8
+* 3.2.11
 
 This gem has been tested against the following Ruby versions:
 
@@ -37,12 +37,24 @@ $ gem install thincloud-test
 
 ## Usage
 
-This engine manages testing dependencies and adds a generator to Rails, `thincloud:test`. Running the generator will run the `minitest-rails` generator and add application configuration files:
+### Rails
+
+This railtie manages testing dependencies and adds a generator to Rails, `thincloud:test`. Running the generator will run the `minitest-rails` generator and add application configuration files:
 
 * Invoke the generator:
 
 ```
 $ rails generate thincloud:test
+```
+
+### Rails Engine / Railtie
+
+The gem manages the test framework dependencies for you and provides a command to bootstrap a test environment. Running the command will add `minitest` support and application configuration files:
+
+* Invoke the generator:
+
+```
+$ thincloud-testify
 ```
 
 ## Contributing
@@ -56,7 +68,6 @@ $ rails generate thincloud:test
 
 ## License
 
-* Freely distributable and licensed under the MIT-style license. See LICENSE file for details.
-* Copyright (c) 2012 New Leaders
-* https://newleaders.com
-
+* Freely distributable and licensed under the [MIT license](http://newleaders.mit-license.org/2012-2013/license.html).
+* Copyright (c) 2012-2013 New Leaders ([opensource@newleaders.com](opensource@newleaders.com))
+* [https://newleaders.com](https://newleaders.com)
