@@ -4,8 +4,3 @@ class MiniTest::Rails::ActiveSupport::TestCase
     desc.respond_to?(:validate)
   end
 end
-
-unless ENV["CI"]
-  require "minitest/reporters"
-  MiniTest::Reporters.use! MiniTest::Reporters::ProgressReporter.new
-end
