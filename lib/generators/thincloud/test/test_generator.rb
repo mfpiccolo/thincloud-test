@@ -13,7 +13,7 @@ module Thincloud
         create_file "test/factories/.gitkeep"
 
         remove_file "test/minitest_helper.rb"
-        copy_file "minitest_helper.rb", "test/minitest_helper.rb"
+        copy_file "minitest_helper_rails.rb", "test/minitest_helper.rb"
 
         copy_file "capybara.rb",         "test/support/capybara.rb"
         copy_file "factory_girl.rb",     "test/support/factory_girl.rb"
