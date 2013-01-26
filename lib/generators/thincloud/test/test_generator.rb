@@ -22,25 +22,26 @@ module Thincloud
       end
 
       # Generates thincloud test infrastructure outside of Rails
-      def standalone
-        setup_minitest
+      no_tasks do
+        def standalone
+          setup_minitest
 
-        copy_file "support/minitest_reporters.rb",
-                  "test/support/minitest_reporters.rb"
+          copy_file "support/minitest_reporters.rb",
+                    "test/support/minitest_reporters.rb"
 
-        copy_file "test.rake", "lib/tasks/test.rake"
+          copy_file "test.rake", "lib/tasks/test.rake"
 
-        copy_file "Guardfile"
+          copy_file "Guardfile"
 
-        setup_ci
+          setup_ci
 
-        update_gitignore
+          update_gitignore
 
-        say_status "", ""
-        say_status "success", "thincloud-test standalone has finished."
-        say_status "", "Customize .travis.yml and test/ci/* for your project."
+          say_status "", ""
+          say_status "success", "thincloud-test standalone has finished."
+          say_status "", "Customize .travis.yml and test/ci/* for your project."
+        end
       end
-
 
     private
 
