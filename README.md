@@ -1,14 +1,24 @@
-# Thincloud::Test
+# thincloud-test [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/newleaders/thincloud-test)
 
 ## Description
 
-Testing framework configuration generator for Thincloud apps with support for Rails applications and Rails Engines/Railties.
+Opinionated testing framework dependencies and configuration for Ruby applications.
+
+[New Leaders](https://newleaders.com) uses this gem to manage the following dependencies:
+
+* [cane](https://github.com/square/cane)
+* [guard](https://github.com/guard/guard)
+* [guard-minitest](https://github.com/guard/guard-minitest)
+* [minitest](https://github.com/seattlerb/minitest)
+* [minitest-reporters](https://github.com/CapnKernul/minitest-reporters)
+* [mocha](https://github.com/visionmedia/mocha)
+* [rb-fsevent](https://github.com/thibaudgg/rb-fsevent)
+* [simplecov](https://github.com/colszowka/simplecov)
+* [terminal-notifier-guard](https://github.com/Springest/terminal-notifier-guard)
+* [thor](https://github.com/wycats/thor)
+
 
 ## Requirements
-
-This gem requires Rails 3.2.11+ and has been tested on the following versions:
-
-* 3.2.11
 
 This gem has been tested against the following Ruby versions:
 
@@ -37,25 +47,24 @@ $ gem install thincloud-test
 
 ## Usage
 
-### Rails
+The gem manages the test framework dependencies for you and provides a command to bootstrap a test environment.
 
-This railtie manages testing dependencies and adds a generator to Rails, `thincloud:test`. Running the generator will run the `minitest-rails` generator and add application configuration files:
+The goal of `thincloud-test` is to be minimal by default but provide additional capabilities by following simple conventions.
 
-* Invoke the generator:
+If you just want to get started using `minitest`:
 
+```ruby
+require "thincloud/test"
 ```
-$ rails generate thincloud:test
-```
 
-### Rails Engine / Railtie
-
-The gem manages the test framework dependencies for you and provides a command to bootstrap a test environment. Running the command will add `minitest` support and application configuration files:
-
-* Invoke the generator:
+To enable the default New Leaders conventions, run the following command:
 
 ```
 $ thincloud-testify
 ```
+
+This will bootstrap your project with a `test/` directory, a `minitest_helper.rb` with some default configuration, a `test/support/` directory with configuration for `mocha`, custom minitest formatters, a `Guardfile`, a default Travis CI configuration, and more! :tada: :balloon:
+
 
 ## Contributing
 

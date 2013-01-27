@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require "thincloud/test/generator"
+require "thincloud/test/test_generator"
 
-Thincloud::Test::Generator.generate
+Thincloud::Test::TestGenerator.new.testify!

@@ -1,2 +1,2 @@
-require "thincloud/test/version"
-require "thincloud/test/railtie"
+require "minitest/autorun"
+require "minitest/pride"  # Provides awesome colorful output

@@ -5,8 +5,10 @@ Gem::Specification.new do |s|
   s.authors       = ["Robert Bousquet", "Phil Cohen", "Don Morrison"]
   s.email         = ["rbousquet@newleaders.com", "pcohen@newleaders.com",
                      "dmorrison@newleaders.com"]
-  s.description   = "Test harness generator for new Thincloud apps."
-  s.summary       = "Test harness generator for new Thincloud apps."
+  s.description   = "Opinionated test dependencies and conventions for " <<
+                    "Ruby applications."
+  s.summary       = "Opinionated test dependencies and conventions for " <<
+                    "Ruby applications."
   s.homepage      = "http://newleaders.github.com/thincloud-test"
 
   s.files         = `git ls-files`.split($\)
@@ -16,22 +18,16 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.version       = Thincloud::Test::VERSION
 
-  s.add_dependency "rails",                   "~> 3.2.11"
-  s.add_dependency "cane",                    "~> 2.5.0"
-  s.add_dependency "capybara",                "~> 2.0.2"
-  s.add_dependency "database_cleaner",        "~> 0.9.1"
-  s.add_dependency "guard",                   "~> 1.6.1"
-  s.add_dependency "factory_girl_rails",      "~> 4.1.0"
-  s.add_dependency "minitest",                "~> 4.5.0"
-  s.add_dependency "minitest-rails",          "~> 0.5.0"
-  s.add_dependency "guard-minitest",          "~> 0.5.0"
-  s.add_dependency "minitest-rails-shoulda",  "~> 0.4.0"
-  s.add_dependency "rb-fsevent",              "~> 0.9.1"
-  s.add_dependency "simplecov",               "~> 0.7.1"
+  s.add_dependency "cane", "~> 2.5.2"
+  s.add_dependency "guard", "~> 1.6.1"
+  s.add_dependency "minitest", "~> 4.5.0"
+  s.add_dependency "minitest-reporters", "~> 0.14.7"
+  s.add_dependency "guard-minitest", "~> 0.5.0"
+  s.add_dependency "rb-fsevent", "~> 0.9.1"
+  s.add_dependency "simplecov", "~> 0.7.1"
   s.add_dependency "terminal-notifier-guard", "~> 1.5.3"
-  s.add_dependency "mocha",                   "~> 0.13.2" # Must be after minitest
-  s.add_dependency "minitest-rails-capybara", "~> 0.5.1"
-  s.add_dependency "shoulda-matchers",        "1.4.1" # 1.4.2 requires mocha 0.10
-  s.add_dependency "minitest-reporters",      "~> 0.14.6"
+  s.add_dependency "thor", "~> 0.17.0"
+  s.add_dependency "mocha", "~> 0.13.2" # Must be after minitest
 
+  s.add_development_dependency "rake"
 end
