@@ -1,7 +1,5 @@
-require 'test_helper'
+require "test_helper"
 
-class ThincloudTestTest < ActiveSupport::TestCase
-  test "truth" do
-    assert_kind_of Module, Thincloud::Test
-  end
+describe Thincloud::Test do
+  it { Thincloud::Test.must_be_kind_of Module }
 end
