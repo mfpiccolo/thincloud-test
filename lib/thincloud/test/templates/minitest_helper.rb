@@ -11,7 +11,7 @@ if RUBY_ENGINE == "ruby"
   end
 end
 
-require "thincloud-test"
+require "thincloud/test"
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
