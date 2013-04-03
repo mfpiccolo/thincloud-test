@@ -1,48 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Thincloud-test by newleaders</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <title>Thincloud Test by newleaders</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1 class="header">Thincloud-test</h1>
-        <p class="header">Test harness generator for new Thincloud apps</p>
+    <div id="container">
+      <div class="inner">
 
-        <ul>
-          <li class="download"><a class="buttons" href="https://github.com/newleaders/thincloud-test/zipball/master">Download ZIP</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/newleaders/thincloud-test/tarball/master">Download TAR</a></li>
-          <li><a class="buttons github" href="https://github.com/newleaders/thincloud-test">View On GitHub</a></li>
-        </ul>
+        <header>
+          <h1>Thincloud Test</h1>
+          <h2>Test harness generator for new Thincloud apps</h2>
+        </header>
 
-        <p class="header">This project is maintained by <a class="header name" href="https://github.com/newleaders">newleaders</a></p>
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/newleaders/thincloud-test/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/newleaders/thincloud-test/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/newleaders/thincloud-test" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
 
+        <hr>
 
-      </header>
-      <section>
-        <h1>Thincloud::Test</h1>
+        <section id="main_content">
+          <h1>thincloud-test <a href="https://codeclimate.com/github/newleaders/thincloud-test"><img src="https://codeclimate.com/badge.png" alt="Code Climate"></a>
+</h1>
 
 <h2>Description</h2>
 
-<p>Test harness generator for new Thincloud apps.</p>
+<p>Opinionated testing framework dependencies and configuration for Ruby applications.</p>
 
-<h2>Requirements</h2>
-
-<p>This gem requires Rails 3.2+ and has been tested on the following versions:</p>
+<p><a href="https://newleaders.com">New Leaders</a> uses this gem to manage the following dependencies:</p>
 
 <ul>
-<li>3.2</li>
-</ul><p>This gem has been tested against the following Ruby versions:</p>
+<li><a href="https://github.com/square/cane">cane</a></li>
+<li><a href="https://github.com/guard/guard">guard</a></li>
+<li><a href="https://github.com/guard/guard-minitest">guard-minitest</a></li>
+<li><a href="https://github.com/seattlerb/minitest">minitest</a></li>
+<li><a href="https://github.com/CapnKernul/minitest-reporters">minitest-reporters</a></li>
+<li><a href="https://github.com/visionmedia/mocha">mocha</a></li>
+<li><a href="https://github.com/thibaudgg/rb-fsevent">rb-fsevent</a></li>
+<li><a href="https://github.com/colszowka/simplecov">simplecov</a></li>
+<li><a href="https://github.com/Springest/terminal-notifier-guard">terminal-notifier-guard</a></li>
+<li><a href="https://github.com/wycats/thor">thor</a></li>
+</ul><h2>Requirements</h2>
+
+<p>This gem has been tested against the following Ruby versions:</p>
 
 <ul>
 <li>1.9.3</li>
@@ -65,12 +76,21 @@
 
 <h2>Usage</h2>
 
-<p>This gem adds a generator to Rails, <code>thincloud:test</code>. Running the generator will install test-related gems, adds a minitest-based spec directory and application configuration:</p>
+<p>The gem manages the test framework dependencies for you and provides a command to bootstrap a test environment.</p>
 
-<ul>
-<li>Invoke the generator:</li>
-</ul><pre><code>$ rails generate thincloud:test
+<p>The goal of <code>thincloud-test</code> is to be minimal by default but provide additional capabilities by following simple conventions.</p>
+
+<p>If you just want to get started using <code>minitest</code>:</p>
+
+<div class="highlight"><pre><span class="nb">require</span> <span class="s2">"thincloud/test"</span>
+</pre></div>
+
+<p>To enable the default New Leaders conventions, run the following command:</p>
+
+<pre><code>$ thincloud-testify
 </code></pre>
+
+<p>This will bootstrap your project with a <code>test/</code> directory, a <code>minitest_helper.rb</code> with some default configuration, a <code>test/support/</code> directory with configuration for <code>mocha</code>, custom minitest formatters, a <code>Guardfile</code>, a default Travis CI configuration, and more! <img class="emoji" title=":tada:" alt=":tada:" src="https://a248.e.akamai.net/assets.github.com/images/icons/emoji/tada.png" height="20" width="20" align="absmiddle"><img class="emoji" title=":balloon:" alt=":balloon:" src="https://a248.e.akamai.net/assets.github.com/images/icons/emoji/balloon.png" height="20" width="20" align="absmiddle"></p>
 
 <h2>Contributing</h2>
 
@@ -83,17 +103,18 @@
 </ol><h2>License</h2>
 
 <ul>
-<li>Freely distributable and licensed under the MIT-style license. See LICENSE file for details.</li>
-<li>Copyright (c) 2012 New Leaders</li>
+<li>Freely distributable and licensed under the <a href="http://newleaders.mit-license.org/2012-2013/license.html">MIT license</a>.</li>
+<li>Copyright (c) 2012-2013 New Leaders (<a href="opensource@newleaders.com">opensource@newleaders.com</a>)</li>
 <li><a href="https://newleaders.com">https://newleaders.com</a></li>
 </ul>
-      </section>
-      <footer>
-        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
-      </footer>
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-		          <script type="text/javascript">
+        </section>
+
+        <footer>
+          Thincloud Test is maintained by <a href="https://github.com/newleaders">newleaders</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+                  <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -104,5 +125,7 @@
             } catch(err) {}
           </script>
 
+      </div>
+    </div>
   </body>
 </html>
