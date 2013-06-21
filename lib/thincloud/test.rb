@@ -1,2 +1,2 @@
-require "minitest/autorun"
-require "minitest/pride"  # Provides awesome colorful output
+require "thincloud/test/simplecov"
+require "thincloud/test/minitest"
