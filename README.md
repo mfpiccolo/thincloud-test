@@ -10,9 +10,7 @@ Opinionated testing framework dependencies and configuration for Ruby applicatio
 * [guard](https://github.com/guard/guard)
 * [guard-minitest](https://github.com/guard/guard-minitest)
 * [minitest](https://github.com/seattlerb/minitest)
-* [minitest-reporters](https://github.com/CapnKernul/minitest-reporters)
 * [mocha](https://github.com/visionmedia/mocha)
-* [rb-fsevent](https://github.com/thibaudgg/rb-fsevent)
 * [simplecov](https://github.com/colszowka/simplecov)
 * [terminal-notifier-guard](https://github.com/Springest/terminal-notifier-guard)
 * [thor](https://github.com/wycats/thor)
@@ -55,6 +53,19 @@ If you just want to get started using `minitest`:
 
 ```ruby
 require "thincloud/test"
+```
+
+This requires `minitest` and `simplecov` with a default Simplecov configuration. You can require them independently if needed. Adding filters to Simplecov for example:
+
+```ruby
+require "thincloud/simplecov"
+
+Simplecov.configure do
+  add_filter "/spec/"
+  add_filter "/some_other_dir/"
+end
+
+require "thincloud/minitest"
 ```
 
 To enable the default New Leaders conventions, run the following command:
