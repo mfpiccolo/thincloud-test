@@ -58,14 +58,14 @@ require "thincloud/test"
 This requires `minitest` and `simplecov` with a default Simplecov configuration. You can require them independently if needed. Adding filters to Simplecov for example:
 
 ```ruby
-require "thincloud/simplecov"
+require "thincloud/test/simplecov"
 
 Simplecov.configure do
   add_filter "/spec/"
   add_filter "/some_other_dir/"
 end
 
-require "thincloud/minitest"
+require "thincloud/test/minitest"
 ```
 
 To enable the default New Leaders conventions, run the following command:
