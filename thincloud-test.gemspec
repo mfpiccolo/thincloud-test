@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "cane", "~> 2.6.0"
   s.add_dependency "guard", "~> 1.8.0"
-  s.add_dependency "minitest", "~> 5.0.4"
+  s.add_dependency "minitest", "~> 4.2"
   s.add_dependency "guard-minitest", "~> 1.0.0.rc.2"
   s.add_dependency "simplecov", "~> 0.8.0.pre"
   s.add_dependency "terminal-notifier-guard", "~> 1.5.3"
