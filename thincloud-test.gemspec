@@ -18,14 +18,14 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.version       = Thincloud::Test::VERSION
 
-  s.add_dependency "cane", "~> 2.6.0"
-  s.add_dependency "guard", "~> 1.8.0"
-  s.add_dependency "minitest", "~> 5.0.4"
+  s.add_dependency "cane", "~> 2.6"
+  s.add_dependency "guard", "~> 1.8"
+  s.add_dependency "minitest", ">= 4.2"
   s.add_dependency "guard-minitest", "~> 1.0.0.rc.2"
-  s.add_dependency "simplecov", "~> 0.8.0.pre"
-  s.add_dependency "terminal-notifier-guard", "~> 1.5.3"
-  s.add_dependency "thor", "~> 0.18.1"
-  s.add_dependency "mocha", "~> 0.14.0" # Must be after minitest
+  s.add_dependency "simplecov", "~> 0.8"
+  s.add_dependency "terminal-notifier-guard", "~> 1.5"
+  s.add_dependency "thor", "~> 0.18"
+  s.add_dependency "mocha", "~> 0.14" # Must be after minitest
 
   s.add_development_dependency "rake"
 end

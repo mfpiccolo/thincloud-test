@@ -21,6 +21,7 @@ Opinionated testing framework dependencies and configuration for Ruby applicatio
 This gem has been tested against the following Ruby versions:
 
 * 1.9.3
+* 2.0.0
 
 
 ## Installation
