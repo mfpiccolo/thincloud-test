@@ -33,6 +33,7 @@ module Thincloud
       end
 
       def rake
+        create_file "Rakefile" unless File.exist?("Rakefile")
         append_file "Rakefile", "\nDir[\"./lib/tasks/**/*.rake\"].sort.each { |t| load t }\n"
         copy_file "cane.rake", "lib/tasks/cane.rake"
         copy_file "test.rake", "lib/tasks/test.rake"
