@@ -1,7 +1,7 @@
 require "rake/testtask"
 
-# run test and cane by default
-task default: [:test, :cane]
+# run test
+task default: :test
 
 Rake::TestTask.new(:test) do |t|
   t.libs << "lib"
